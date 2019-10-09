@@ -14,9 +14,9 @@
                 <div class = "pr-5"><strong>1k</strong> followers</div>
                 <div class = "pr-5"><strong>10</strong> following</div>
             </div>
-            <div class = "pt-4 font-weight-bold">Helloworld.org</div>
-            <div>Hi, This is another test</div>
-            <div><a href="#">www.Helloworld.org</a></div>
+            <div class = "pt-4 font-weight-bold">{{ $user->profile->title }}</div>
+            <div>{{ $user->profile->description }}</div>
+            <div><a href="#">{{ $user->profile->url ?? 'N/A'}}</a></div>
         </div>
     </div>
 
