@@ -14,7 +14,7 @@
             followUser(){
                 axios.post('/follow/1')
                     .then(response=> {
-                        alert(response);
+                        alert('a');
                     });
             }
         }
