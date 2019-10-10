@@ -1,5 +1,5 @@
 # Laravel-Demo
-#Steps:#
+**Steps:**
 
 1.set up composer and nodejs
 2.do command:composer global require laravel/installer for using composer in laravel
