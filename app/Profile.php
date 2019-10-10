@@ -9,7 +9,8 @@ class Profile extends Model
     protected $guarded = [];
     public function profileImage()
     {
-        return ($this->image)? $this->image : 'Laravel-Demo\storage\app\public\profile\vRYPW8CYdIM8UtXsggZV03gQW3a9IIKn68uS33jG.png';
+        $imagePath = ($this->image)? $this->image : 'profile/FCeWrmwCvv5zZtn4DC8jQytgIsszaG7vtaIYS3YM.png';
+        return '/storage/'.$imagePath;
     }
     public function user()
     {
