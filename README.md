@@ -96,3 +96,11 @@
 93.do front end adjust
 94.do default img for new register
 95.reference commits on github for follow button and email to new users
+
+```javascript
+function fancyAlert(arg) {
+  if(arg) {
+    $.facebox({div:'#foo'})
+  }
+}
+```
