@@ -1,9 +1,9 @@
 # Laravel-Demo
 # Steps:
 
-1.set up composer and nodejs
-2.do command:composer global require laravel/installer for using composer in laravel
-3.call laravel in command to ensure it works
+1. set up composer and nodejs
+1. do command:composer global require laravel/installer for using composer in laravel
+1. call laravel in command to ensure it works
 4.ensure composer in PATH
 5.command:laravel new project name // create project
 6.cd to the directory
