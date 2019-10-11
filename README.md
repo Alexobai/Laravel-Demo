@@ -2,12 +2,12 @@
 # Steps:
 
 1. set up composer and nodejs
-1. do command:composer global require laravel/installer for using composer in laravel
-1. call laravel in command to ensure it works
-1. ensure composer in PATH
-1. command:laravel new project name // create project
+1. do command:'composer global require laravel/installer' for using composer in laravel
+1. call __laravel__ in command to ensure it works
+1. ensure composer in _PATH_
+1. command:__laravel new project _name___ // create project
 1. cd to the directory
-1. command: php artisan serve
+1. command: __php artisan serve__
 1. go to the address
 1. add new terminal
 1. go to welcome.blade.php page to edit for front end
