@@ -18,10 +18,10 @@ class ProfilesController extends Controller
         
         $followingCount =  $user->following->count();
         
-
+        $users = User::all();
         
 
-        return view('profiles/index', compact('user','follows','postCount','followersCount','followingCount'));
+        return view('profiles/index', compact('users','user','follows','postCount','followersCount','followingCount'));
     }
     public function edit(User $user)
     {
@@ -52,4 +52,5 @@ class ProfilesController extends Controller
         ));
         return redirect("/profile/{$user->id}");
     }
+
 }
