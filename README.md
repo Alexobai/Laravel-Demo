@@ -2,7 +2,7 @@
 # Steps:
 
 1. set up composer and nodejs
-1. do command:'composer global require laravel/installer' for using composer in laravel
+1. do command:__composer global require laravel/installer__ for using composer in laravel
 1. call __laravel__ in command to ensure it works
 1. ensure composer in _PATH_
 1. command:__laravel new project _name___ // create project
@@ -10,22 +10,22 @@
 1. command: __php artisan serve__
 1. go to the address
 1. add new terminal
-1. go to welcome.blade.php page to edit for front end
-1. command:php artisan make:auth //use ui:auth instead if the composer version is higher than 5.8
-1. command:npm install
-1. command:npm run dev
-1. add database file with sqlite type and also a folder of database
-1. edit env file to change the DB lines
-1. command:php artisan make:migrate
+1. go to _welcome.blade.php_ page to edit for front end
+1. command:__php artisan make:auth__ //use ui:auth instead if the composer version is higher than 5.8
+1. command:__npm install__
+1. command:__npm run dev__
+1. create database folder and create new sqlite file
+1. edit .env file to change the DB lines //delete all DB_ except DB_connection and change it to sqlite
+1. command:__php artisan make:migrate__ //handle database and create tables automatically
 1. reboot serve as doing changes in database
 1. register a new user
-1. go to app.blade.php to edit title after login
+1. go to _app.blade.php_ to edit title after login
 1. add a svg folder for storing pictures
-1. add the img src on app.blade.php and adjust the format
+1. add the img src on _app.blade.php_ and adjust the format
 1. instead of dashboard edit the frontend as a profile
-1. use div and class to set the styles for now and hard code for variables
-1. add font in app.scss file and background in variables
-1. command: npm run dev to refresh the page
+1. use <div> and class to set the styles for now and hard code for dynamic variables
+1. add font in _app.scss_ file and background in variables
+1. command: __npm run dev__ to refresh the page
 1. go to register.blade.php to add a username col for front end
 1. also add username in register controller and add validation
 1. databse migrate add username in the database table
