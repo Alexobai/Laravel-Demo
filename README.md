@@ -11,7 +11,7 @@
 1. go to the address
 1. add new terminal
 1. go to _welcome.blade.php_ page to edit for front end
-1. command:__php artisan make:auth__ //use ui:auth instead if the composer version is higher than 5.8
+1. command:__php artisan make:auth__ /  Or __composer require laravel/ui__ //use ui:auth instead if the composer version is higher than 5.8
 1. command:__npm install__
 1. command:__npm run dev__
 1. create database folder and create new sqlite file
