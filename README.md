@@ -5,6 +5,7 @@
 1. do command:__composer global require laravel/installer__ for using composer in laravel
 1. call __laravel__ in command to ensure it works
 1. ensure composer in _PATH_
+1. __composer install__ add vendor and etc
 1. command:__laravel new project _name___ // create project
 1. cd to the directory
 1. command: __php artisan serve__
