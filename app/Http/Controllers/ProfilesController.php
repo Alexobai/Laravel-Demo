@@ -9,12 +9,13 @@ use Illuminate\Support\Facades\Cache;
 class ProfilesController extends Controller
 {
     public function index(User $user)
-    {
-        $follows = (auth()->user()) ? auth()->user()->following->contains($user->id) :false;
-       
+    {   
+        //dd(auth()->user()->followers->contains($user->_id));
+        $follows = (auth()->user()) ? auth()->user()->following->contains($user->_id) :false;
+        
         $postCount = $user->posts->count();
         
-        $followersCount = $user->profile->followers->count();
+        $followersCount = $user->followers->count();
         
         $followingCount =  $user->following->count();
         
@@ -50,7 +51,7 @@ class ProfilesController extends Controller
             $data,
             $imageArray ?? []
         ));
-        return redirect("/profile/{$user->id}");
+        return redirect("/profile/{$user->_id}");
     }
 
 }

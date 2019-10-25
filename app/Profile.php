@@ -2,7 +2,8 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use Jenssegers\Mongodb\Eloquent\Model;
+use Illuminate\Database\Eloquent\Collection;
 
 class Profile extends Model
 {   
@@ -15,9 +16,5 @@ class Profile extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
-    }
-    public function followers()
-    {
-        return $this->belongsToMany(User::class);
     }
 }

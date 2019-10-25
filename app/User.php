@@ -4,13 +4,14 @@ namespace App;
 
 use App\Mail\NewUserWelcomeMail;
 use Illuminate\Notifications\Notifiable;
+use Jenssegers\Mongodb\Auth\User as Authenticatable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Support\Facades\Mail;
 
 class User extends Authenticatable
 {
     use Notifiable;
+    protected $connection = 'mongodb'; 
 
     /**
      * The attributes that are mass assignable.
@@ -45,11 +46,10 @@ class User extends Authenticatable
         parent::boot();
 
         static::created(function ($user) {
-            $user->profile()->create([
-                'title' => $user->username,
+            Profile::create([
+                'user_id' => $user->_id
             ]);
 
-            Mail::to($user->email)->send(new NewUserWelcomeMail());
         });
     }
  
@@ -59,7 +59,11 @@ class User extends Authenticatable
     }
     public function following()
     {
-        return $this->belongsToMany(Profile::class);
+        return $this->belongsToMany(User::class, null, 'followers','following');
+    }
+    public function followers()
+    {
+        return $this->belongsToMany(User::class, null, 'following','followers');
     }
     public function profile()
     {

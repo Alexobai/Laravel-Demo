@@ -1,105 +1,72 @@
-# Laravel-Demo
-# Steps:
+<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
-1. set up composer and nodejs
-1. do command:__composer global require laravel/installer__ for using composer in laravel
-1. call __laravel__ in command to ensure it works
-1. ensure composer in _PATH_
-1. command:__laravel new project _name___ // create project
-1. cd to the directory
-1. command: __php artisan serve__
-1. go to the address
-1. add new terminal
-1. go to _welcome.blade.php_ page to edit for front end
-1. command:__php artisan make:auth__ //use ui:auth instead if the composer version is higher than 5.8
-1. command:__npm install__
-1. command:__npm run dev__
-1. create database folder and create new sqlite file
-1. edit .env file to change the DB lines //delete all DB_ except DB_connection and change it to sqlite
-1. command:__php artisan make:migrate__ //handle database and create tables automatically
-1. reboot serve as doing changes in database
-1. register a new user
-1. go to _app.blade.php_ to edit title after login
-1. add a svg folder for storing pictures
-1. add the img src on _app.blade.php_ and adjust the format
-1. instead of dashboard edit the frontend as a profile
-1. use <div> and class to set the styles for now and hard code for dynamic variables
-1. add font in _app.scss_ file and background in variables
-1. command: __npm run dev__ to refresh the page
-1. go to register.blade.php to add a username col for front end
-1. also add username in register controller and add validation
-1. databse migrate add username in the database table
-1. command:php artisan migrate:fresh //refresh the database to register again for username
-1. go to user model to add username element
-1. go to app.blade.php to change the name to username when logged in //frontend
-1. command: php artisan make:controller ProfilesController
-1. copy the index method from homecontroller
-1. add routes in web.php
-1. the view is calling the prefix.blade.php
-1. add user parameter in index method and use a variable to contain the user info
-1. return the correct view and change the hardcode username in frontend
-1. command:php artisan make:model Profile -m
-1. add elements and keys in table
-1. command:php artisan migrate //refresh
-1 .Profile model create user method to indicate the relation of profile and user
-1. Also do so in User model
-1. command:php artisan tinker 
-1. tinker: $profile = new \App\Profile(); $profile->title = 'blah'; $profile->description='description';$pofile->user_id = 1;$profile->s ave(); 
-1.chan ge the hardcode of title and description in frontend
-1.tink er: push() method save all
-1. com mand:php artisan make:model Post -m
-1. add  elements in table
-1. ref resh the database
-1. add posts method in user model for relation
-1. also in the Post model
-1. add new post link front end
-1. add route for add post
-1. command: php artisan make:controller PostController
-1. create method in controller to view posts
-1. create folder under view for profile methods and webpages
-1.  do front end things in create.blade.php
-1. use post as method for submittion
-1. postcontroller store method to store info when submit new post
-1. csrf in php level for protection
-1. store method validation for info and redirect return value
-1. add fillable in post model
-1. make sure only the auth user can add new post
-1. add contructor for postcontroller middleware auth//jump to login page if not logged in
-1. use store method of laravel enter the parameters to store img
-1. command: php artisan storage:link //store img directory
-1. post order reverse in user model
-1. count() in front end for count the post numbers
-1. command: composer require intervention/image //resize images be aware for use before
-1. do save image code in profilecontroller
-1. add route for show the post
-1. add show method in post controller and post parameter
-1. also create the front end
-1. return view post/show
-1. do front end design for show post
-1. add edit profile in profile index front end
-1. add route for edit and create method in profile model
-1. return edit
-1. add update method in profile model after edit 
-1. use patch method and add patch in route
-1. add currect profile info in front end
-1. do validation for update
-1. add fillable in profile model including auth
-1. use policy to protect edit link
-1. command:php artisan make:policy ProfilePolicy -m Profile
-1. edit update method in policy file return true or false;
-1. use @can in frontend php level to protect edit link
-1. also do it for add new post
-1. change the route order to prevent confliction of routes
-1. do migrate refresh for img path
-1. add boot method in user model for new user info
-1. change img hardcode
-1. do front end adjust
-1. do default img for new register
-1. reference commits on github for follow button and email to new users
-```javascript
-function fancyAlert(arg) {
-  if(arg) {
-    $.facebox({div:'#foo'})
-  }
-}
-```
+<p align="center">
+<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
+</p>
+
+## About Laravel
+
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
+
+## Learning Laravel
+
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+
+If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+
+## Laravel Sponsors
+
+We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+
+- **[Vehikl](https://vehikl.com/)**
+- **[Tighten Co.](https://tighten.co)**
+- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+- **[64 Robots](https://64robots.com)**
+- **[Cubet Techno Labs](https://cubettech.com)**
+- **[Cyber-Duck](https://cyber-duck.co.uk)**
+- **[British Software Development](https://www.britishsoftware.co)**
+- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
+- **[DevSquad](https://devsquad.com)**
+- [UserInsights](https://userinsights.com)
+- [Fragrantica](https://www.fragrantica.com)
+- [SOFTonSOFA](https://softonsofa.com/)
+- [User10](https://user10.com)
+- [Soumettre.fr](https://soumettre.fr/)
+- [CodeBrisk](https://codebrisk.com)
+- [1Forge](https://1forge.com)
+- [TECPRESSO](https://tecpresso.co.jp/)
+- [Runtime Converter](http://runtimeconverter.com/)
+- [WebL'Agence](https://weblagence.com/)
+- [Invoice Ninja](https://www.invoiceninja.com)
+- [iMi digital](https://www.imi-digital.de/)
+- [Earthlink](https://www.earthlink.ro/)
+- [Steadfast Collective](https://steadfastcollective.com/)
+- [We Are The Robots Inc.](https://watr.mx/)
+- [Understand.io](https://www.understand.io/)
+- [Abdel Elrafa](https://abdelelrafa.com)
+- [Hyper Host](https://hyper.host)
+
+## Contributing
+
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+
+## Security Vulnerabilities
+
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+
+## License
+
+The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
